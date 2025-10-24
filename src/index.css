@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +6,158 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Navigation */
+.nav-link {
+  margin-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .nav-link {
+    margin-left: 40px;
+  }
+}
+
+/* Support section */
+#supportHero {
+  background-color: rgb(56, 126, 209);
+  color: white;
+  padding: 2rem 1rem;
+}
+
+#supportHero a {
+  color: white;
+}
+
+#supportWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+}
+
+@media (min-width: 768px) {
+  #supportWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 150px;
+  }
+}
+
+#supportHero input {
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  #supportHero input {
+    padding: 20px 50px;
+    font-size: 20px;
+  }
+}
+
+/* Mobile-first utilities */
+.py-5-mobile {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+@media (min-width: 768px) {
+  .py-5-mobile {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+.mb-3-mobile {
+  margin-bottom: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  .mb-3-mobile {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Card and button improvements */
+.card-responsive {
+  padding: 1rem !important;
+}
+
+@media (min-width: 768px) {
+  .card-responsive {
+    padding: 2rem !important;
+  }
+}
+
+.btn-responsive {
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+  .btn-responsive {
+    width: auto;
+  }
+}
+
+/* Text alignment */
+.text-center-mobile {
+  text-align: center !important;
+}
+
+@media (min-width: 768px) {
+  .text-center-mobile {
+    text-align: left !important;
+  }
+}
+
+/* Navbar improvements */
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Forms */
+.form-control {
+  height: 48px;
+  font-size: 16px;
+}
+
+/* Responsive images */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive tables */
+.table-responsive {
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Grid improvements */
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.col, [class*="col-"] {
+  padding-left: 15px;
+  padding-right: 15px;
 }
