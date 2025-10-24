@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Signup() {
   const [username, setUsername] = useState("");
@@ -84,7 +85,7 @@ function Signup() {
           </form>
 
           <p className="text-center-mobile mt-3">
-            Already have an account? <a href="/login">Login</a>
+            Already have an account? <Link to="/login">Login</Link>
           </p>
 
           {message && (
