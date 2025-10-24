@@ -19,7 +19,7 @@ function Navbar() {
 
     // Listen for messages from dashboard
     const onMessage = (event) => {
-      if (event.origin !== "http://localhost:3001") return;
+      if (event.origin !== "https://zerodh-dashboard.netlify.app") return;
       
       const data = event.data || {};
       if (data.type === "REQUEST_TOKEN") {
@@ -31,7 +31,7 @@ function Navbar() {
               type: "AUTH_TOKEN",
               token,
               user: user ? JSON.parse(user) : null
-            }, "http://localhost:3001");
+            }, "https://zerodh-dashboard.netlify.app");
           } catch (e) {}
         }
       }
@@ -58,7 +58,7 @@ function Navbar() {
     const win = dashboardWinRef.current;
     if (win && !win.closed) {
       try {
-        win.postMessage({ type: "LOGOUT" }, "http://localhost:3001");
+        win.postMessage({ type: "LOGOUT" }, "https://zerodh-dashboard.netlify.app");
       } catch (e) {}
     }
 
@@ -67,7 +67,7 @@ function Navbar() {
   };
 
   const openDashboard = () => {
-    const dashboardUrl = "http://localhost:3001";
+    const dashboardUrl = "https://zerodh-dashboard.netlify.app";
     // Try to open in a new tab/window; include noopener to be safe.
     const win = window.open(dashboardUrl, "_blank", "noopener,noreferrer");
     // If popup blocked (win is null), fallback to same-tab navigation.
@@ -88,7 +88,7 @@ function Navbar() {
           type: "AUTH_TOKEN",
           token,
           user: user ? JSON.parse(user) : null
-        }, "http://localhost:3001");
+        }, "https://zerodh-dashboard.netlify.app");
       } catch (e) {}
     };
 

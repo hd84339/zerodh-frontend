@@ -16,7 +16,7 @@ function Login() {
     setMessageType("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("https://zerodh-backend.onrender.com/api/auth/login", {
         usernameOrEmail,
         password,
       });

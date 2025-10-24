@@ -22,7 +22,7 @@ function OpenAccount() {
   }, []);
 
   const openDashboard = () => {
-    const dashboardUrl = "http://localhost:3001";
+    const dashboardUrl = "https://zerodh-dashboard.netlify.app";
     const win = window.open(dashboardUrl, "_blank");
     dashboardWinRef.current = win;
 
@@ -37,7 +37,7 @@ function OpenAccount() {
           type: "AUTH_TOKEN",
           token,
           user: user ? JSON.parse(user) : null
-        }, "http://localhost:3001");
+        }, "https://zerodh-dashboard.netlify.app");
       } catch (e) {}
     };
 
