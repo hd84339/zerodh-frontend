@@ -68,7 +68,13 @@ function Navbar() {
 
   const openDashboard = () => {
     const dashboardUrl = "http://localhost:3001";
-    const win = window.open(dashboardUrl, "_blank");
+    // Try to open in a new tab/window; include noopener to be safe.
+    const win = window.open(dashboardUrl, "_blank", "noopener,noreferrer");
+    // If popup blocked (win is null), fallback to same-tab navigation.
+    if (!win) {
+      window.location.assign(dashboardUrl);
+      return;
+    }
     dashboardWinRef.current = win;
 
     // Send token via postMessage

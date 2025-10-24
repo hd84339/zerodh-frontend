@@ -1,11 +1,12 @@
-import React from "react";
+// Use named React hooks
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Universe() {
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-  const dashboardWinRef = React.useRef(null);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const dashboardWinRef = useRef(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     // Check login status
     const token = localStorage.getItem("token");
     setIsLoggedIn(!!token);

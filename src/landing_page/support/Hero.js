@@ -1,4 +1,4 @@
-import React from "react";
+// React import removed (automatic JSX runtime) - not referenced directly in this file
 
 function Hero() {
   const quickLinks = [
@@ -17,9 +17,14 @@ function Hero() {
     <section className="container-fluid" id="supportHero">
       <div className="p-5" id="supportWrapper">
         <h4>Support Portal</h4>
-        <a href="#" style={{ textDecoration: "none" }}>
+        <button
+          type="button"
+          className="btn btn-link p-0"
+          style={{ textDecoration: "none" }}
+          aria-label="Track Tickets"
+        >
           Track Tickets
-        </a>
+        </button>
       </div>
 
       <div className="row p-5 m-3">
@@ -35,9 +40,14 @@ function Hero() {
 
           {quickLinks.map((link, idx) => (
             <div key={idx} className="mb-2">
-              <a href="#" style={{ textDecoration: "none" }}>
+              <button
+                type="button"
+                className="btn btn-link p-0"
+                style={{ textDecoration: "none" }}
+                aria-label={link}
+              >
                 {link}
-              </a>
+              </button>
             </div>
           ))}
         </div>
@@ -47,9 +57,14 @@ function Hero() {
           <ol>
             {featuredArticles.map((article, idx) => (
               <li key={idx}>
-                <a href="#" style={{ textDecoration: "none" }}>
+                <button
+                  type="button"
+                  className="btn btn-link p-0"
+                  style={{ textDecoration: "none" }}
+                  aria-label={article}
+                >
                   {article}
-                </a>
+                </button>
               </li>
             ))}
           </ol>

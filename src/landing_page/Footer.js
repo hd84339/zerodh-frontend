@@ -1,4 +1,4 @@
-import React from "react";
+// React import removed (automatic JSX runtime) - not referenced directly in this file
 
 function Footer() {
   return (
@@ -30,7 +30,14 @@ function Footer() {
                 "Zerodha cares (CSR)",
               ].map((link, idx) => (
                 <li key={idx}>
-                  <a href="#" style={{ textDecoration: "none" }}>{link}</a>
+                  <button
+                    type="button"
+                    className="btn btn-link p-0"
+                    style={{ textDecoration: "none" }}
+                    aria-label={link}
+                  >
+                    {link}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -40,9 +47,22 @@ function Footer() {
           <div className="col">
             <p className="fw-bold">Support</p>
             <ul className="list-unstyled">
-              {["Contact", "Support portal", "Z-Connect blog", "List of charges", "Downloads & resources"].map((link, idx) => (
+              {[
+                "Contact",
+                "Support portal",
+                "Z-Connect blog",
+                "List of charges",
+                "Downloads & resources",
+              ].map((link, idx) => (
                 <li key={idx}>
-                  <a href="#" style={{ textDecoration: "none" }}>{link}</a>
+                  <button
+                    type="button"
+                    className="btn btn-link p-0"
+                    style={{ textDecoration: "none" }}
+                    aria-label={link}
+                  >
+                    {link}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -52,9 +72,16 @@ function Footer() {
           <div className="col">
             <p className="fw-bold">Account</p>
             <ul className="list-unstyled">
-              {["Open an account", "Fund transfer", "60 day challenge"].map((link, idx) => (
+              {['Open an account', 'Fund transfer', '60 day challenge'].map((link, idx) => (
                 <li key={idx}>
-                  <a href="#" style={{ textDecoration: "none" }}>{link}</a>
+                  <button
+                    type="button"
+                    className="btn btn-link p-0"
+                    style={{ textDecoration: "none" }}
+                    aria-label={link}
+                  >
+                    {link}
+                  </button>
                 </li>
               ))}
             </ul>

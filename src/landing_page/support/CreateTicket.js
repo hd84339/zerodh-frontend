@@ -1,4 +1,4 @@
-import React from "react";
+// React import removed (automatic JSX runtime) - not referenced directly in this file
 
 const topics = [
   "Online Account Opening",
@@ -28,12 +28,14 @@ function CreateTicket() {
             </h4>
             {topics.map((topic, tIdx) => (
               <div key={tIdx}>
-                <a
-                  href="#"
+                <button
+                  type="button"
+                  className="btn btn-link p-0"
                   style={{ textDecoration: "none", lineHeight: "2.5" }}
+                  aria-label={topic}
                 >
                   {topic}
-                </a>
+                </button>
                 <br />
               </div>
             ))}

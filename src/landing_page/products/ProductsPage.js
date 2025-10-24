@@ -1,12 +1,11 @@
-import React from "react";
+// React import removed (automatic JSX runtime)
 
 import Hero from "./Hero";
 import LeftSection from "./LeftSection";
 import RightSection from "./RightSection";
 import Universe from "./Universe";
 
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+// Navbar and Footer imports removed (not used in this component)
 
 function PricingPage() {
   return (
